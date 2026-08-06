@@ -2,6 +2,8 @@
 
 | **Date**| **Operation** | **File/folder** | **Description**|
 |--------------|---------------|---------------|---------------|
+| 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
+| 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
 | 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
 | 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
 | 2026-07-25| Added |`release-26C/aiapps/hcm/career-development` | Added career development workflows and business objects|
@@ -100,6 +102,14 @@ Instructions for upgrading existing Fusion Agentic Apps workspaces with the late
 | Topic | Instructions that guide an agent on a specific subject. | Tell an agent how to answer benefits, succession, payroll, or policy questions. |
 | Deeplink | A link definition that opens a target page or record. | Open an employee profile, succession plan, transaction, or work area. |
 | Connector Instance | A configured connection to an external connector. | Connect to approved external systems. |
+
+## ATLAS - Agentic Testing and Lifecycle Automation Suite
+
+Fusion AI Studio ATLAS, the Agentic Testing and Lifecycle Automation Suite, helps teams turn important agent scenarios into repeatable, executable tests. Each test combines an input, expected workflow behavior, representative replay data, and evaluation criteria, enabling teams to verify that an agent continues to behave as intended as workflows, prompts, models, and environments evolve. By reducing dependence on changing external data and manual result review, ATLAS provides a consistent foundation for validating agentic workflows throughout development.
+
+ATLAS supports both structural and semantic validation. Teams can confirm required and prohibited workflow paths, verify deterministic outcomes, and apply semantic evaluation to natural-language responses where exact text matching would be too rigid. Tests can be authored from natural-language scenarios, generated or recorded with representative data, organized with tags for different validation scopes, and maintained alongside workflow source. File-based replay keeps external service boundaries stable while routing, conditions, code, and LLM nodes continue to execute, making regressions easier to reproduce, investigate, and resolve without requiring every test run to recreate the same external conditions manually.
+
+ATLAS integrates with local development and CI/CD workflows, allowing tests to run individually or as suites and producing reports that capture results, evaluated outputs, warnings, token usage, and execution duration. Labeled runs support consistent baseline and candidate-model comparisons, while optimization sweeps evaluate model placement at the individual LLM-node level using quality, latency, and usage evidence. Reports can be retained as reviewable engineering artifacts and incorporated into existing test pipelines and quality dashboards. Together, these capabilities help teams detect regressions earlier, compare changes using consistent evidence, improve model selection, and maintain reliable quality across Fusion AI agents as workflows and application experiences continue to evolve across release cycles.
 
 
 ## Documentation
