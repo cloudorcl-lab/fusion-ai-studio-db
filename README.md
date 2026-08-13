@@ -2,6 +2,9 @@
 
 | **Date**| **Operation** | **File/folder** | **Description**|
 |--------------|---------------|---------------|---------------|
+| 2026-08-12| Added |`release-26C/aiapps/scm/inventory` |Added inventory workflows, business objects for item shortage and lot expiry. Workflows : Inventory Item Shortage Monitor, Inventory Item Stockout Monitor Workflows. Business Objects : Expiring Inventory Lots, Items Awaiting Inspection, Item Stockout Subinventory Locations, Transfer Lots to Subinventory |
+| 2026-08-12| Added |`release-26C/aiapps/prc/purchasing` |Added workflows, business objects in PRC family related to purchase orders and purchase agreements. Workflows : Compliance Checklists, My Recent Requisitions, Purchase Agrements,Purchase Orders Purchase Order Status Distribution,Purchase Agreement Status Distribution. Business Objects : Compliance Checklist, Purchase Agreements, Purchase Orders, My Requisitions|
+| 2026-08-12| Updated |`release-26C/aiapps/scm/cost-management` |Updated workflows, business objects in cost-management to handle no data scenarios. Workflows : Inventory Valuation Comparision Advisor, Period Validation Exceptions Advisor|
 | 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
 | 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
 | 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
