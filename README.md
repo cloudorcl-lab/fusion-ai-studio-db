@@ -1,10 +1,10 @@
-### Change Log
+### Change Log Summary
 
 | **Date**| **Operation** | **File/folder** | **Description**|
 |--------------|---------------|---------------|---------------|
-| 2026-08-12| Added |`release-26C/aiapps/scm/inventory` |Added inventory workflows, business objects for item shortage and lot expiry. Workflows : Inventory Item Shortage Monitor, Inventory Item Stockout Monitor Workflows. Business Objects : Expiring Inventory Lots, Items Awaiting Inspection, Item Stockout Subinventory Locations, Transfer Lots to Subinventory |
-| 2026-08-12| Added |`release-26C/aiapps/prc/purchasing` |Added workflows, business objects in PRC family related to purchase orders and purchase agreements. Workflows : Compliance Checklists, My Recent Requisitions, Purchase Agrements,Purchase Orders Purchase Order Status Distribution,Purchase Agreement Status Distribution. Business Objects : Compliance Checklist, Purchase Agreements, Purchase Orders, My Requisitions|
-| 2026-08-12| Updated |`release-26C/aiapps/scm/cost-management` |Updated workflows, business objects in cost-management to handle no data scenarios. Workflows : Inventory Valuation Comparision Advisor, Period Validation Exceptions Advisor|
+| 2026-08-12| Added |`release-26C/aiapps/scm/inventory` |Added inventory workflows, business objects for item shortage and lot expiry.|
+| 2026-08-12| Added |`release-26C/aiapps/prc/purchasing` |Added workflows, business objects in PRC family related to purchase orders and purchase agreements.|
+| 2026-08-12| Updated |`release-26C/aiapps/scm/cost-management` |Updated workflows, business objects in cost-management to handle no data scenarios.|
 | 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
 | 2026-08-06| Updated |`release-26C/aistudio/bin/aistudio-extension.zip` |Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps|
 | 2026-07-25| Updated |`release-26C/aistudio/bin/aistudio-skill.zip` |Updated to resolve authentication issues when connecting to the Fusion environment on the Windows platform|
@@ -118,6 +118,51 @@ ATLAS integrates with local development and CI/CD workflows, allowing tests to r
 ## Documentation
 
 You can find the online documentation for Oracle Fusion AI Agent Studio at [official documentation](https://docs.oracle.com/en/cloud/saas/fusion-ai/) and information about the project at [Oracle Fusion AI](https://www.oracle.com/in/applications/fusion-ai/).
+
+### Change Log Details
+
+##### 12th Aug 2026
+-----
+Added inventory workflows, business objects for item shortage and lot expiry in folder `release-26C/aiapps/scm/inventory` 
+
+- Workflows : Inventory Item Shortage Monitor, Inventory Item Stockout Monitor Workflows
+- Business Objects : Expiring Inventory Lots, Items Awaiting Inspection, Item Stockout Subinventory Locations, Transfer Lots to Subinventory
+
+Added workflows, business objects in PRC family related to purchase orders and purchase agreements in folder `release-26C/aiapps/prc/purchasing`
+
+- Workflows : Compliance Checklists, My Recent Requisitions, Purchase Agrements,Purchase Orders Purchase Order Status Distribution,Purchase Agreement Status Distribution
+- Business Objects : Compliance Checklist, Purchase Agreements, Purchase Orders, My Requisitions
+
+Updated workflows, business objects in cost-management to handle no data scenarios in folder `release-26C/aiapps/scm/cost-management`
+- Workflows : Inventory Valuation Comparision Advisor, Period Validation Exceptions Advisor
+
+Updated succession planning agentic app and supporting workflow to fix bugs while adding potential successor in folder `release-26C/aiapps/hcm/succession-management`
+- Application : Person Succession Readiness Workspace
+- Workflows : Succession Overview Advisor, Succession Overview Agent Team
+- Business Object : Direct Reports Context
+
+##### 6th Aug 2026
+-----
+Added ATLAS (Agentic Testing and Lifecycle Automation Suite) framework - a new agentic testing infrastructure for AI Studio workflows and apps in `release-26C/aistudio/bin/aistudio-skill.zip`, `release-26C/aistudio/bin/aistudio-extension.zip`
+
+Fusion AI Studio ATLAS—the Agentic Testing and Lifecycle Automation Suite—enables teams to transform critical agent scenarios into repeatable, executable tests. Each test brings together an input, expected workflow behavior, representative replay data, and evaluation criteria to verify that agents continue to perform as intended as prompts, models, workflows, and environments evolve. By minimizing reliance on dynamic external data and manual result validation, ATLAS provides a reliable and consistent foundation for testing and validating agentic workflows throughout the development lifecycle.
+
+ATLAS enables both structural and semantic validation of agentic workflows. Teams can verify required or prohibited execution paths, validate deterministic outcomes, and use semantic evaluation for natural-language responses where exact text matching may be overly restrictive. Tests can be created from natural-language scenarios, generated or recorded using representative data, tagged for different validation scopes, and maintained alongside workflow source code. File-based replay provides consistent external service boundaries while allowing routing, conditions, code, and LLM nodes to execute normally. This makes regressions more reproducible and easier to diagnose and resolve, without requiring each test run to manually recreate the same external conditions.
+
+ATLAS integrates seamlessly with local development and CI/CD workflows, enabling teams to execute individual tests or complete test suites and generate detailed reports covering results, evaluated outputs, warnings, token usage, and execution time. Labeled runs provide a consistent basis for comparing baselines with candidate models, while optimization sweeps assess model selection at the individual LLM-node level using evidence across quality, latency, and usage. Reports can be preserved as reviewable engineering artifacts and integrated into existing test pipelines and quality dashboards. Together, these capabilities enable teams to identify regressions earlier, evaluate changes against consistent evidence, optimize model selection, and sustain reliable quality across Fusion AI agents as workflows and application experiences evolve from one release cycle to the next.
+
+##### 25th July 2026
+-----
+Updated skill in `release-26C/aistudio/bin/aistudio-skill.zip`, `release-26C/aistudio/bin/aistudio-extension.zip` to resolve authentication issues when connecting to the Fusion environment on the Windows platform
+
+Added workflows, business objects in HCM family related to career development in folders `release-26C/aiapps/hcm/career-development`,`release-26C/aiapps/hcm/journeys`,`release-26C/aiapps/hcm/learning` 
+
+- Workflows : My Career Development Tasks, My Current Learning, My Self Developing Skills
+- Business Objects : Career development skills lookup, Career Development Tasks, Learning Searches
+
+Updated descriptions and business object code reference in below workflows
+-  `release-26C/aiapps/hcm/human-resources/xx_worker_card.wf` 
+-  `release-26C/aiapps/hcm/absences/xx_team_upcoming_absences.wf`
 
 ## Contributing
 
