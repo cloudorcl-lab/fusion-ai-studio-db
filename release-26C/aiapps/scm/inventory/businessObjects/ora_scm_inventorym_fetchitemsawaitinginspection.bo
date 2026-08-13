@@ -1,0 +1,64 @@
+{
+  "_comment": "Copyright © 2026, Oracle and/or its affiliates. ** Licensed under the Universal Permissive License (UPL), Version 1.0  as shown at oss.oracle.com/licenses/upl",
+  "supportedObjectId": "300100668115505",
+  "name": "Fetch Items Awaiting Inspection",
+  "description": "Helps the warehouse operations manager to fetch the items that are awaiting inspection in an Organization. The Organization ID will be the input to this business object.",
+  "objectCode": "ORA_SCM_INVENTORYM_XX_FETCHITEMSAWAITINGINSPECTION",
+  "family": "SCM",
+  "product": "INVENTORY_MANAGEMENT",
+  "objectSource": "ADF_BC",
+  "restResourcePath": "/fscmRestApi/scm/redwood/11.13.18.05/inspectLineSearches",
+  "restResourceIdentifier": "-1",
+  "seededFlag": false,
+  "mandatoryFlag": false,
+  "objectProperties": {
+    "jsonSchemaName": "supportedObjectProperties",
+    "jsonSchemaVersion": 1,
+    "tools": [
+      {
+        "name": "fetch_items_awaiting_inspection",
+        "description": "This function fetches the items that are awaiting inspection in a particular Organization. OrganizationId is an input to this function",
+        "operationType": "POST",
+        "resourcePath": "/fscmRestApi/scm/redwood/11.13.18.05/inspectLineSearches",
+        "resourceType": "ADF_BC_FIXED_QUERY",
+        "bodyTemplate": "{\n    \"filters\": [\n        {\n            \"name\": \"ShipmentLine.ToOrganizationId\",\n            \"value\": \"{pOrganizationId}\"\n        }\n    ],\n    \"init\": \"Y\",\n    \"offset\": 0,\n    \"searchFields\": [],\n    \"sort\": [\n        {\n            \"direction\": \"desc\",\n            \"name\": \"TransactionDate\"\n        }\n    ]\n}",
+        "useNativeAuthentication": true,
+        "type": "BUS_OBJECT",
+        "parameterDefinitions": [
+          {
+            "name": "pOrganizationId",
+            "dataType": "string",
+            "description": "This is the OrganizationId",
+            "id": 2,
+            "isToken": true,
+            "location": "body",
+            "source": "placeholder",
+            "defaultValue": ""
+          }
+        ],
+        "sampleQueries": [
+          {
+            "description": "This sample payload represents a request to fetch a list of items awaiting inspection filtered by the specified ShipmentLine.ToOrganizationId. It includes parameters for pagination (offset), sorting by TransactionDate in descending order, and an initialization flag (init) to start the search. The key entities shown are the organization filter and sorting criteria used to retrieve relevant inspection items.",
+            "query": {
+              "filters": [
+                {
+                  "name": "ShipmentLine.ToOrganizationId",
+                  "value": "XXX"
+                }
+              ],
+              "init": "Y",
+              "offset": 0,
+              "searchFields": [],
+              "sort": [
+                {
+                  "direction": "desc",
+                  "name": "TransactionDate"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "_comment": "Copyright © 2026, Oracle and/or its affiliates. ** Licensed under the Universal Permissive License (UPL), Version 1.0  as shown at oss.oracle.com/licenses/upl",
-  "supportedObjectId": "300100692055317",
+  "supportedObjectId": "300100735299080",
   "name": "Period Validation Exceptions Advisor",
   "description": "Provides validation exception details, cost organization context, and available cost organization names and IDs.",
   "objectCode": "ORA_SCM_XX_COSTMANAGE_VALIDATIONEXCEPTIONSADVISOR",
@@ -14,12 +14,14 @@
   "objectProperties": {
     "jsonSchemaName": "supportedObjectProperties",
     "jsonSchemaVersion": 1,
+    "baseUrlTMKey": "",
+    "serviceNameOverride": "",
     "tools": [
       {
         "name": "getValidationExceptions",
         "description": "Returns validation exception details for a cost book, cost organization, and accounting period.",
         "operationType": "GET",
-        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costAccountingPeriodEndValidations?fields=ErrorSource%2CErrorCount%2CErrorType%2CRequestId&finder=findPeriodEndValidations%3BbindCostBookId%3D{CostBookID}%2CbindCostOrganizationId%3D{CostOrganizationId}%2CbindPeriodName%3D{PeriodName}&onlyData=true&limit=25&offset=0",
+        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costAccountingPeriodEndValidations?fields=ErrorSource,ErrorCount,ErrorType,RequestId&finder=findPeriodEndValidations;bindCostBookId={CostBookID},bindCostOrganizationId={CostOrganizationId},bindPeriodName={PeriodName}&onlyData=true&limit=25&offset=0",
         "resourceType": "ADF_BC_FIXED_QUERY",
         "bodyTemplate": "",
         "useNativeAuthentication": true,
@@ -83,7 +85,7 @@
         "name": "getLastRunDate",
         "description": "Returns cost organization and cost book context for the selected organization and cost book name.",
         "operationType": "GET",
-        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costAccountingPeriods?q=CostOrganizationId%3D%27{CostOrganisationId}%27%20AND%20CostBookId%3D%27{CostBookId}%27",
+        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costAccountingPeriods?q=CostOrganizationId='{CostOrganisationId}' AND CostBookId='{CostBookId}'",
         "resourceType": "ADF_BC_FIXED_QUERY",
         "bodyTemplate": "",
         "useNativeAuthentication": true,
@@ -143,7 +145,7 @@
         "name": "getOrganisationId",
         "description": "Returns available cost organization names and IDs.",
         "operationType": "GET",
-        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costOrganizationsLOV?fields=CostOrganizationName%2CCostOrganizationId&limit=500&onlyData=true",
+        "resourcePath": "/fscmRestApi/resources/11.13.18.05:9/costOrganizationsLOV?fields=CostOrganizationName,CostOrganizationId&limit=500&onlyData=true",
         "resourceType": "ADF_BC_FIXED_QUERY",
         "bodyTemplate": "",
         "useNativeAuthentication": true,

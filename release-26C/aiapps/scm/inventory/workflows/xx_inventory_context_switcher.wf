@@ -183,7 +183,7 @@
               "id": "1782304813335_condition",
               "name": "condition",
               "type": "string",
-              "value": "{{!!$context.$nodes.DEFAULT_ORGANIZATION.$output.items?.[0]?.ProfileOptionValue}}"
+              "value": "{{!!$context.$nodes.DEFAULT_ORGANIZATION.$output.ProfileOptionValue}}"
             }
           ],
           "type": "CONDITION"
